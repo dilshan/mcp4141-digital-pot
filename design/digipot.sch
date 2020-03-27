@@ -1,0 +1,226 @@
+EESchema Schematic File Version 4
+LIBS:digipot-cache
+EELAYER 29 0
+EELAYER END
+$Descr User 7905 5921
+encoding utf-8
+Sheet 1 1
+Title "Digital Potentiometer"
+Date "2020-03-26"
+Rev "1.0.0"
+Comp "Dilshan R Jayakody"
+Comment1 "http://jayakody2000lk.blogspot.com"
+Comment2 "jayakody2000lk@gmail.com"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L digipot:MCP4141 U2
+U 1 1 5E7C2910
+P 4950 2600
+F 0 "U2" H 5600 3300 50  0000 C CNN
+F 1 "MCP4141" H 4700 2550 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 4950 2600 50  0001 C CNN
+F 3 "" H 4950 2600 50  0001 C CNN
+	1    4950 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E7C38C2
+P 2400 3150
+F 0 "#PWR0101" H 2400 2900 50  0001 C CNN
+F 1 "GND" H 2405 2977 50  0000 C CNN
+F 2 "" H 2400 3150 50  0001 C CNN
+F 3 "" H 2400 3150 50  0001 C CNN
+	1    2400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3050 2400 3150
+$Comp
+L power:+5V #PWR0102
+U 1 1 5E7C4058
+P 2400 1750
+F 0 "#PWR0102" H 2400 1600 50  0001 C CNN
+F 1 "+5V" H 2415 1923 50  0000 C CNN
+F 2 "" H 2400 1750 50  0001 C CNN
+F 3 "" H 2400 1750 50  0001 C CNN
+	1    2400 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1750 2400 1850
+$Comp
+L power:+5V #PWR0103
+U 1 1 5E7C41AD
+P 3200 2850
+F 0 "#PWR0103" H 3200 2700 50  0001 C CNN
+F 1 "+5V" H 3215 3023 50  0000 C CNN
+F 2 "" H 3200 2850 50  0001 C CNN
+F 3 "" H 3200 2850 50  0001 C CNN
+	1    3200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2650 3050 2650
+Wire Wire Line
+	3050 2650 3050 2950
+Wire Wire Line
+	3050 2950 3200 2950
+Wire Wire Line
+	3200 2950 3200 2850
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 5E7C474C
+P 3950 2750
+F 0 "SW1" H 3950 2500 50  0000 C CNN
+F 1 "COM-09117" H 3950 3026 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 3800 2910 50  0001 C CNN
+F 3 "~" H 3950 3010 50  0001 C CNN
+	1    3950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E7C5CC5
+P 3500 3150
+F 0 "#PWR0104" H 3500 2900 50  0001 C CNN
+F 1 "GND" H 3505 2977 50  0000 C CNN
+F 2 "" H 3500 3150 50  0001 C CNN
+F 3 "" H 3500 3150 50  0001 C CNN
+	1    3500 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3150 3500 2750
+Wire Wire Line
+	3500 2750 3650 2750
+Wire Wire Line
+	3650 2850 3350 2850
+Wire Wire Line
+	3350 2850 3350 2550
+Wire Wire Line
+	3350 2550 3000 2550
+Wire Wire Line
+	3000 2450 3400 2450
+Wire Wire Line
+	3400 2450 3400 2650
+Wire Wire Line
+	3400 2650 3650 2650
+Wire Wire Line
+	3000 2150 4050 2150
+Wire Wire Line
+	3000 2350 4050 2350
+$Comp
+L power:GND #PWR0105
+U 1 1 5E7CA8BD
+P 5150 3150
+F 0 "#PWR0105" H 5150 2900 50  0001 C CNN
+F 1 "GND" H 5155 2977 50  0000 C CNN
+F 2 "" H 5150 3150 50  0001 C CNN
+F 3 "" H 5150 3150 50  0001 C CNN
+	1    5150 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2700 5150 3150
+$Comp
+L power:+5V #PWR0106
+U 1 1 5E7CB023
+P 5150 1750
+F 0 "#PWR0106" H 5150 1600 50  0001 C CNN
+F 1 "+5V" H 5165 1923 50  0000 C CNN
+F 2 "" H 5150 1750 50  0001 C CNN
+F 3 "" H 5150 1750 50  0001 C CNN
+	1    5150 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1850 5150 1750
+Wire Wire Line
+	4250 2350 4450 2350
+Wire Wire Line
+	4250 2150 4450 2150
+Wire Wire Line
+	4050 2150 4250 2350
+Wire Wire Line
+	4050 2350 4250 2150
+$Comp
+L MCU_Microchip_ATtiny:ATtiny13-20PU U1
+U 1 1 5E7C1586
+P 2400 2450
+F 0 "U1" H 2900 3000 50  0000 R CNN
+F 1 "ATtiny13" H 2900 1900 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2400 2450 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc2535.pdf" H 2400 2450 50  0001 C CNN
+	1    2400 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2250 4450 2250
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5E7CF46C
+P 6050 2250
+F 0 "J1" H 6130 2292 50  0000 L CNN
+F 1 "POT" H 6130 2201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6050 2250 50  0001 C CNN
+F 3 "~" H 6050 2250 50  0001 C CNN
+	1    6050 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2350 5850 2350
+Wire Wire Line
+	5850 2250 5750 2250
+Wire Wire Line
+	5750 2150 5850 2150
+Text Label 3100 2150 0    50   ~ 0
+MOSI
+Text Label 3100 2250 0    50   ~ 0
+CS
+Text Label 3100 2350 0    50   ~ 0
+SCK
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E7DC886
+P 6050 2950
+F 0 "J2" H 6130 2942 50  0000 L CNN
+F 1 "POWER" H 6130 2851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 2950 50  0001 C CNN
+F 3 "~" H 6050 2950 50  0001 C CNN
+	1    6050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5E7DCCA4
+P 5800 3150
+F 0 "#PWR0107" H 5800 2900 50  0001 C CNN
+F 1 "GND" H 5805 2977 50  0000 C CNN
+F 2 "" H 5800 3150 50  0001 C CNN
+F 3 "" H 5800 3150 50  0001 C CNN
+	1    5800 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 5E7DCFC3
+P 5800 2850
+F 0 "#PWR0108" H 5800 2700 50  0001 C CNN
+F 1 "+5V" H 5815 3023 50  0000 C CNN
+F 2 "" H 5800 2850 50  0001 C CNN
+F 3 "" H 5800 2850 50  0001 C CNN
+	1    5800 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2950 5800 2950
+Wire Wire Line
+	5850 3050 5800 3050
+Wire Wire Line
+	5800 3050 5800 3150
+Wire Wire Line
+	5800 2850 5800 2950
+$EndSCHEMATC
